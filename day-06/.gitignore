@@ -1,0 +1,5 @@
+typescript/node_modules/
+typescript/*.js
+
+react-app/client/node_modules/
+react-app/server/node_modules/

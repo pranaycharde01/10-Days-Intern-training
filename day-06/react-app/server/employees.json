@@ -1,0 +1,30 @@
+[
+    {
+        "id": 2,
+        "name": "Priya Patil",
+        "email": "priya@gmail.com",
+        "department": "HR",
+        "salary": 30000
+    },
+    {
+        "id": 3,
+        "name": "Amit Verma",
+        "email": "amit@gmail.com",
+        "department": "Finance",
+        "salary": 40000
+    },
+    {
+        "id": 4,
+        "name": "Neha Singh",
+        "email": "neha@gmail.com",
+        "department": "IT",
+        "salary": 45000
+    },
+    {
+        "id": 1789718238784,
+        "name": "Pranay Charde",
+        "email": "pranay@gmail.com",
+        "department": "IT",
+        "salary": 80000
+    }
+]
