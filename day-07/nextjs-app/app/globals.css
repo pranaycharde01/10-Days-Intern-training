@@ -1,0 +1,505 @@
+/* ==============================
+   GLOBAL RESET
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* ==============================
+   COMMON BUTTONS
+   ============================== */
+
+.primary-button,
+.secondary-button,
+.delete-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 42px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+}
+
+.primary-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.secondary-button {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+.secondary-button:hover {
+    background: #d1d5db;
+}
+
+.delete-button {
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+/* ==============================
+   BUTTON GROUP
+   ============================== */
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* ==============================
+   HOME PAGE
+   ============================== */
+
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.home-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.home-card h1 {
+    margin-bottom: 16px;
+    font-size: 38px;
+    color: #111827;
+}
+
+.home-card p {
+    margin-bottom: 30px;
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   EMPLOYEE LIST PAGE
+   ============================== */
+
+.employees-container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+    color: #111827;
+}
+
+.page-header p {
+    color: #6b7280;
+}
+
+/* ==============================
+   EMPLOYEE GRID
+   ============================== */
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.employee-card {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.employee-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+}
+
+.employee-card h2 {
+    margin-bottom: 18px;
+    font-size: 21px;
+    color: #111827;
+}
+
+.employee-card p {
+    margin-bottom: 10px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.employee-card strong {
+    color: #1f2937;
+}
+
+/* ==============================
+   EMPLOYEE DETAILS PAGE
+   ============================== */
+
+.details-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 24px;
+}
+
+.details-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.details-card h1 {
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: #111827;
+}
+
+.details-list {
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.details-list p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.details-list strong {
+    color: #111827;
+}
+
+/* ==============================
+   CREATE / EDIT FORM
+   ============================== */
+
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 24px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #111827;
+}
+
+.form-card > p {
+    margin-bottom: 25px;
+    color: #6b7280;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card label {
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-card input {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #111827;
+    font-size: 15px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-card input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-card input::placeholder {
+    color: #9ca3af;
+}
+
+.form-card button {
+    margin-top: 5px;
+}
+
+/* ==============================
+   ERROR MESSAGE
+   ============================== */
+
+.error-message {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+/* ==============================
+   ERROR PAGE
+   ============================== */
+
+.error-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.error-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.error-card h1 {
+    margin-bottom: 15px;
+    color: #b91c1c;
+    font-size: 28px;
+}
+
+.error-card p {
+    margin-bottom: 25px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* ==============================
+   LOADING PAGE
+   ============================== */
+
+.loading-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.loading-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.loading-card h2 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.loading-card p {
+    color: #6b7280;
+}
+
+/* ==============================
+   LOADING SPINNER
+   ============================== */
+
+.spinner {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==============================
+   EMPTY STATE
+   ============================== */
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 50px 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.empty-state h2 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.empty-state p {
+    color: #6b7280;
+}
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 900px) {
+    .employee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 650px) {
+    .home-card {
+        padding: 35px 24px;
+    }
+
+    .home-card h1 {
+        font-size: 29px;
+    }
+
+    .home-card p {
+        font-size: 15px;
+    }
+
+    .employees-container {
+        padding: 30px 18px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .employee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-card,
+    .form-card {
+        padding: 28px 20px;
+    }
+
+    .details-card h1,
+    .form-card h1 {
+        font-size: 26px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .primary-button,
+    .button-group .secondary-button,
+    .button-group .delete-button {
+        width: 100%;
+    }
+}
