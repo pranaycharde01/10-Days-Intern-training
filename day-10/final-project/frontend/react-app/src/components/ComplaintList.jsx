@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ComplaintForm from "./ComplaintForm";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function ComplaintList() {
     const [complaints, setComplaints] = useState([]);
