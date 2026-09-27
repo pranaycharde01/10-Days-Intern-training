@@ -139,7 +139,7 @@ function Dashboard() {
 function App() {
     const openAngularAnalytics = () => {
         window.open(
-            "http://localhost:4200/inspection-analytics",
+            "https://smart-facility-angular.vercel.app/inspection-analytics",
             "_blank"
         );
     };
