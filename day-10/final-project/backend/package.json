@@ -1,0 +1,25 @@
+{
+  "name": "smart-facility-management-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Smart Facility Management Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql",
+    "facility-management",
+    "rest-api"
+  ],
+  "author": "Pranay Charde",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.1"
+  }
+}
