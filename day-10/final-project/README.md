@@ -1,5 +1,9 @@
 # Smart Facility Management Dashboard
 
+## Live Demo
+
+**Live Project:** https://smart-facility-frontend.vercel.app/
+
 ## Project Overview
 
 Smart Facility Management Dashboard is a web application used to manage facilities, inspections, and complaints.
